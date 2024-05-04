@@ -19,11 +19,10 @@ public class App {
 
         Prodotto product = new Prodotto(productName, productDescription, productprice);
 
-        double productCode = product.getProductCode();
-        double ivaPrice = product.ivaPrice();
-        System.out.println(product);
-        System.out.println(productCode);
-        System.out.println(ivaPrice);
+        System.out.println("Nome e codice prodotto : " + product.extendedName());
+        System.out.println("Prezzo discount ; " + product.getProductPrice());
+        System.out.println("Prezzo ivato : " + product.ivaPrice());
+        System.out.println("EAN code : " + Prodotto.extendedCode);
 
     }
 

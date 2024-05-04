@@ -51,7 +51,7 @@ public class Prodotto {
 
         Random code = new Random();
 
-        this.productCode = code.nextInt(100);
+        this.productCode = code.nextInt(200);
 
     }
 
@@ -62,7 +62,12 @@ public class Prodotto {
 
     public String extendedName() {
 
-        return this.productCode + "-" + this.productName;
+        return this.productName + "-" + this.productCode;
+    }
+
+    private static String extendedCode(int productCode) {
+        String exetendedCode = String.format("%08d", productCode);
+        return exetendedCode;
     }
 
 }
