@@ -4,25 +4,30 @@ import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+
+        System.out.println("");
+        System.out.println(" - DATABASE PRODOTTI -");
+        System.out.println("-------------------------------------------------");
 
         Scanner scan = new Scanner(System.in);
 
         System.out.println(" Inserisci il nome del prodotto");
         String productName = scan.nextLine();
+        System.out.println("");
 
         System.out.println(" Inserisci ka descrizione del prodotto");
         String productDescription = scan.nextLine();
+        System.out.println("");
 
-        System.out.println(" Inserisci il prezzo del prodotto");
+        System.out.println(" Inserisci il prezzo del prodotto (EUR)");
         double productprice = scan.nextDouble();
+        System.out.println("");
 
         Prodotto product = new Prodotto(productName, productDescription, productprice);
 
-        System.out.println("Nome e codice prodotto : " + product.extendedName());
-        System.out.println("Prezzo discount ; " + product.getProductPrice());
-        System.out.println("Prezzo ivato : " + product.ivaPrice());
-        System.out.println("EAN code : " + Prodotto.extendedCode);
+        product.pricePrint();
+
+        scan.close();
 
     }
 

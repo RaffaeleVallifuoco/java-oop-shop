@@ -1,7 +1,6 @@
 package org.lessons.java.shop;
 
 import java.util.Random;
-import java.util.random.*;;
 
 public class Prodotto {
 
@@ -65,9 +64,28 @@ public class Prodotto {
         return this.productName + "-" + this.productCode;
     }
 
-    private static String extendedCode(int productCode) {
+    public static String extendedCode(int productCode) {
+
         String exetendedCode = String.format("%08d", productCode);
+
         return exetendedCode;
+    }
+
+    public void pricePrint() {
+
+        System.out.println(" Prodotto inserito :");
+        System.out.println("");
+
+        System.out.println(" Prezzo discount ; " + this.getProductPrice() + " €");
+
+        System.out.println(" Nome e identificativo prodotto : " + this.extendedName());
+
+        System.out.println(" Prezzo ivato : " + this.ivaPrice() + " €");
+
+        System.out.println(" EAN code : " + Prodotto.extendedCode(this.getProductCode()));
+
+        System.out.println("");
+        System.out.println("");
     }
 
 }
